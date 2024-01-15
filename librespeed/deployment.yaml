@@ -1,25 +1,26 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: librespeed
+  name: demo-server
 spec:
-  replicas: 1
   selector:
     matchLabels:
-      app: librespeed
+      app: demo-server
+  replicas: 2
   template:
     metadata:
       labels:
-        app: librespeed
+        app: demo-server
     spec:
-      terminationGracePeriodSeconds: 0
       containers:
-        - name: librespeed
-          image: lscr.io/linuxserver/librespeed:latest
+        - name: demo-server
+          image: nginx
+          ports:
+            - containerPort: 80
           resources:
             requests:
               memory: 256Mi
-              cpu: "1"
+              cpu: "500m"
             limits:
               memory: 256Mi
               cpu: "500m"
