@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: librespeed
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: librespeed
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+        - name: librespeed
+          image: lscr.io/linuxserver/librespeed:latest
+          ports:
+            - containerPort: 80
