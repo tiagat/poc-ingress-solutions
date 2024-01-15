@@ -15,7 +15,7 @@ spec:
     repoURL: https://kubernetes.github.io/ingress-nginx
     targetRevision: 4.9.0
     helm:
-      properties:
+      parameters:
         - name: controller.customConfigMap
           value: nginx-config
   syncPolicy:
