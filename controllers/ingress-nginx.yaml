@@ -16,8 +16,8 @@ spec:
     targetRevision: 4.9.0
     helm:
       parameters:
-        - name: controller.customConfigMap
-          value: nginx-config
+        - name:  controller.service.type
+          value: NodePort
   syncPolicy:
     automated:
       selfHeal: true
