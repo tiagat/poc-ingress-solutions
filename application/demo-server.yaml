@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name:  demo-server
-  namespace: default
+  namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
@@ -11,7 +11,7 @@ spec:
     namespace: default
     name: in-cluster
   source:
-    path: "applications/demo-server"
+    path: "application/resources"
     repoURL: https://github.com/tiagat/poc-ingress-solutions
     targetRevision: main
   syncPolicy:

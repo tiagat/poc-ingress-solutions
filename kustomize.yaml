@@ -1,2 +1,2 @@
 resources:
-  - applications/demo-server.yaml
+  - application/demo-server.yaml
