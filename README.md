@@ -20,3 +20,4 @@ kubectl apply -f controllers/ingress-nginx.yaml
 ```
 
 
+--kubeconfig ~/.kube/tiagat-sandbox 
