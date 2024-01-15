@@ -7,15 +7,9 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
 spec:
-  ingressClassName: ingress-nginx
-  rules:
-    - host: nginx.local.tiagat.dev
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: demo-service
-                port: 
-                  number: 80
+  ingressClassName: nginx
+  defaultBackend:
+    service:
+      name: demo-service
+      port:
+        number: 80
