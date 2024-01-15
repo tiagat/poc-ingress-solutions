@@ -5,12 +5,12 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: demo-server
+      run: demo-server
   replicas: 2
   template:
     metadata:
       labels:
-        app: demo-server
+        run: demo-server
     spec:
       containers:
         - name: demo-server
