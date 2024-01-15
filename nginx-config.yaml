@@ -5,3 +5,4 @@ metadata:
   namespace: ingress-nginx
 data:
   error-log-level: "debug"
+  hsts: "false"
