@@ -1,8 +1,6 @@
 # poc-ingress-solutions
 
 
-
-
 Argo CD Installation Manifests
 
 ```
