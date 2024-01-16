@@ -16,9 +16,6 @@ spec:
     targetRevision: main
     directory:
       jsonnet:
-        extVars:
-          - name: ingressCount
-            value: "10"
   syncPolicy:
     automated:
       selfHeal: true
