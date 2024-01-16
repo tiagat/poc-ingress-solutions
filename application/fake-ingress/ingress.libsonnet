@@ -22,7 +22,7 @@
             http: {
               paths: [
                 {
-                  path: '/' + item,
+                  path: '/' + item + '/',
                   pathType: 'Prefix',
                   backend: {
                     service: {
