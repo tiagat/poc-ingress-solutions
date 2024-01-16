@@ -16,4 +16,5 @@ kubectl apply -f controllers/ingress-nginx.yaml
 Demo Application
 ```
 kubectl apply -f application/demo-server.yaml
+kubectl apply -f application/fake-ingress.yaml
 ```
