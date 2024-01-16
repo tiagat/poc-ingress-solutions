@@ -11,6 +11,7 @@
           'nginx.ingress.kubernetes.io/ssl-redirect': 'false',
           'nginx.ingress.kubernetes.io/hsts': 'false',
           'nginx.org/hsts': 'false',
+          'ingress.kubernetes.io/rewrite-target': '/'
         },
       },
       spec: {
