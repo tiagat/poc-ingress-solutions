@@ -2,7 +2,7 @@
     apiVersion: "networking.k8s.io/v1",
     kind: "Ingress",
     metadata: {
-        name: "demo-service",
+        name: "demo-service-1",
         namespace: "default",
         annotations: {
             "kubernetes.io/ingress.allow-http": "true",
@@ -19,7 +19,7 @@
                 http: {
                     paths: [
                         {
-                            path: "/",
+                            path: "/1",
                             pathType: "Prefix",
                             backend: {
                                 service: {
