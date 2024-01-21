@@ -17,7 +17,7 @@ spec:
     helm:
       parameters:
         - name: defaultRevision
-          value: default
+          value: 1-20-2
   syncPolicy:
     automated:
       selfHeal: true
