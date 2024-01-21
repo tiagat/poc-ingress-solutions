@@ -8,7 +8,7 @@ metadata:
 spec:
   project: default
   destination:
-    namespace: istio-system
+    namespace: istio-ingress
     name: in-cluster
   source:
     chart: gateway
