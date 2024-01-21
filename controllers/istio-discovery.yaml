@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name:  istio-base
+  name:  istio-discovery
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -11,13 +11,9 @@ spec:
     namespace: istio-system
     name: in-cluster
   source:
-    chart: base
+    chart: istiod
     repoURL: https://istio-release.storage.googleapis.com/charts
     targetRevision: 1.20.2
-    helm:
-      parameters:
-        - name: defaultRevision
-          value: default
   syncPolicy:
     automated:
       selfHeal: true
