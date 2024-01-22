@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name:  kiali-server
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  destination:
+    namespace: istio-system
+    name: in-cluster
+  source:
+    chart: kiali-server
+    repoURL: https://kiali.org/helm-charts
+    targetRevision: 1.78.0
+    helm:
+      parameters:
+        - name: auth.strategy
+          value: anonymous
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
