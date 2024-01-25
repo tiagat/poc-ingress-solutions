@@ -36,3 +36,9 @@ Ensure that there are no issues with the configuration
 $ istioctl analyze
 ✔ No validation issues found when analyzing namespace: default.
 ```
+
+Deploy cert-manager
+
+```
+kubectl apply -f operators/cert-manager.yaml
+```
