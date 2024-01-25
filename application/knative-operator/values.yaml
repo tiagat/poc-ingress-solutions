@@ -1,0 +1,9 @@
+serving:
+  version: "1.12.3"
+
+eventing:
+  version: "1.12.3"
+
+istio:
+  gateway: 
+    namespace: "istio-system"
