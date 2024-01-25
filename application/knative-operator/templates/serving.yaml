@@ -8,3 +8,5 @@ kind: KnativeServing
 metadata:
   name: knative-serving
   namespace: knative-serving
+spec:
+    version: {{ .Values.serving.version }}
