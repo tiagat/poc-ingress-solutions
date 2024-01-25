@@ -7,7 +7,7 @@ Before you install the Knative Serving and Eventing components, first install th
 To **manually** install the latest stable Operator release, run the command:
 
 ```
-kubectl apply -f https://github.com/knative/operator/releases/download/knative-v1.12.2/operator.yaml
+kubectl apply -f https://github.com/knative/operator/releases/download/knative-v1.13.0/operator.yaml
 ```
 
 You can find information about the released versions of the Knative Operator on the [**releases page.**](https://github.com/knative/operator/releases)
