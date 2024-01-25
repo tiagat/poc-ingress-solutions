@@ -8,13 +8,31 @@ kubectl create namespace argocd
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 ```
 
-NGINX Ingress Controller
+Install Istio
+
 ```
-kubectl apply -f controllers/ingress-nginx.yaml
+kubectl apply -f operators/istio-base.yaml
+kubectl apply -f operators/istio-discovery.yaml
+kubectl apply -f operators/istio-ingressgateway.yaml
+kubectl apply -f operators/istio-egressgateway.yaml
 ```
 
-Demo Application
+Add a namespace label to instruct Istio to automatically inject Envoy sidecar proxies
+
 ```
-kubectl apply -f application/demo-server.yaml
-kubectl apply -f application/fake-ingress.yaml
+kubectl label namespace default istio-injection=enabled
+```
+
+Deploy the sample application
+
+```
+kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.20/samples/bookinfo/platform/kube/bookinfo.yaml
+kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.20/samples/bookinfo/networking/bookinfo-gateway.yaml
+```
+
+Ensure that there are no issues with the configuration
+
+```
+$ istioctl analyze
+✔ No validation issues found when analyzing namespace: default.
 ```
