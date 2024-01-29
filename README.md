@@ -1,6 +1,13 @@
 # poc-ingress-solutions
 
 
+Installing OLM
+
+```
+kubectl create -f https://github.com/operator-framework/operator-lifecycle-manager/releases/download/v0.26.0/crds.yaml
+kubectl create -f https://github.com/operator-framework/operator-lifecycle-manager/releases/download/v0.26.0/olm.yaml
+```
+
 Argo CD Installation Manifests
 
 ```
