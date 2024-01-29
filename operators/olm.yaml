@@ -11,7 +11,7 @@ spec:
     namespace: operators
     name: in-cluster
   source:
-    path: "operator-lifecycle-manager"
+    path: "charts/operator-lifecycle-manager"
     repoURL: https://github.com/tiagat/poc-ingress-solutions
     targetRevision: main
   syncPolicy:
