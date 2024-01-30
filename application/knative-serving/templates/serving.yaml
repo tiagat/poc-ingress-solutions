@@ -10,7 +10,7 @@ metadata:
   namespace: knative-serving
 
 spec:
-  version: "1.12.2"
+  # version: "1.12.2"
   config:
     domain:
       "sandbox.tiagat.dev": ""
