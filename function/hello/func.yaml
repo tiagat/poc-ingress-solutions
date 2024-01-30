@@ -1,0 +1,8 @@
+specVersion: 0.36.0
+name: hello
+runtime: node
+registry: docker.io/tiagat
+image: index.docker.io/tiagat/hello:latest
+created: 2024-01-30T13:16:27.736316+01:00
+build:
+  builder: pack
