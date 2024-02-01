@@ -2,7 +2,10 @@ specVersion: 0.36.0
 name: hello
 runtime: node
 registry: docker.io/tiagat
-image: index.docker.io/tiagat/hello:latest
+image: docker.io/tiagat/hello:latest
+imageDigest: sha256:75e7f94c856bc232823cdf589f1a8a2d7d6af8fffae134d396fadab30e0765bc
 created: 2024-01-30T13:16:27.736316+01:00
 build:
   builder: pack
+deploy:
+  namespace: default
